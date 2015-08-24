@@ -14784,3 +14784,131 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+
+
+Started GET "/" for ::1 at 2015-08-24 00:06:03 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (1.1ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (1.5ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+  [1m[35mProduct Load (1.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (253.1ms)
+  [1m[36mLineItem Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1[0m  [["cart_id", 1]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1  [["cart_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (4.5ms)
+Completed 200 OK in 495ms (Views: 434.8ms | ActiveRecord: 14.5ms)
+
+
+Started POST "/line_items?product_id=1" for ::1 at 2015-08-24 00:06:07 -0700
+Processing by LineItemsController#create as JS
+  Parameters: {"authenticity_token"=>"pQNtlWZTdXro+FM/wYfbLsnHgRveHwL3WUXfCxbBt9pUtC52ozR7sDrZeJc0Ef9gPlXhF5sxp9TqCCsDs/kcsQ==", "product_id"=>"1"}
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mLineItem Load (0.4ms)[0m  [1mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT 1[0m  [["cart_id", 1], ["product_id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 1], ["cart_id", 1], ["created_at", "2015-08-24 07:06:07.319451"], ["updated_at", "2015-08-24 07:06:07.319451"]]
+  [1m[35m (2.6ms)[0m  COMMIT
+  [1m[36mLineItem Load (0.4ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 1]]
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered line_items/_line_item.html.erb (5.0ms)
+  Rendered carts/_cart.html.erb (12.1ms)
+  Rendered line_items/create.js.erb (15.4ms)
+Completed 200 OK in 56ms (Views: 24.9ms | ActiveRecord: 7.6ms)
+
+
+Started POST "/line_items?product_id=1" for ::1 at 2015-08-24 00:06:10 -0700
+Processing by LineItemsController#create as JS
+  Parameters: {"authenticity_token"=>"pQNtlWZTdXro+FM/wYfbLsnHgRveHwL3WUXfCxbBt9pUtC52ozR7sDrZeJc0Ef9gPlXhF5sxp9TqCCsDs/kcsQ==", "product_id"=>"1"}
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.9ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mLineItem Load (0.5ms)[0m  [1mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT 1[0m  [["cart_id", 1], ["product_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "line_items" SET "quantity" = $1, "updated_at" = $2 WHERE "line_items"."id" = $3[0m  [["quantity", 2], ["updated_at", "2015-08-24 07:06:10.747867"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mLineItem Load (0.4ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 1]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered line_items/_line_item.html.erb (2.0ms)
+  Rendered carts/_cart.html.erb (6.5ms)
+  Rendered line_items/create.js.erb (9.2ms)
+Completed 200 OK in 27ms (Views: 15.5ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/line_items?product_id=2" for ::1 at 2015-08-24 00:06:14 -0700
+Processing by LineItemsController#create as JS
+  Parameters: {"authenticity_token"=>"pQNtlWZTdXro+FM/wYfbLsnHgRveHwL3WUXfCxbBt9pUtC52ozR7sDrZeJc0Ef9gPlXhF5sxp9TqCCsDs/kcsQ==", "product_id"=>"2"}
+  [1m[36mCart Load (0.8ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (1.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mLineItem Load (0.6ms)[0m  [1mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT 1[0m  [["cart_id", 1], ["product_id", 2]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 2], ["cart_id", 1], ["created_at", "2015-08-24 07:06:14.638243"], ["updated_at", "2015-08-24 07:06:14.638243"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mLineItem Load (0.5ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 1]]
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered line_items/_line_item.html.erb (3.6ms)
+  Rendered carts/_cart.html.erb (9.6ms)
+  Rendered line_items/create.js.erb (12.5ms)
+Completed 200 OK in 30ms (Views: 18.2ms | ActiveRecord: 5.4ms)
+
+
+Started HEAD "/" for 127.0.0.1 at 2015-08-24 10:48:05 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (0.5ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", nil]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2015-08-24 17:48:05.226977"], ["updated_at", "2015-08-24 17:48:05.226977"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (1.8ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1
+  [1m[36mProduct Load (1.3ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (226.5ms)
+  [1m[35mLineItem Exists (0.7ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1  [["cart_id", 2]]
+  [1m[36mLineItem Load (0.4ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 2]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (5.2ms)
+Completed 200 OK in 516ms (Views: 450.2ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-24 10:48:30 -0700
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (5.9ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (20.7ms)
+  [1m[36mLineItem Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1[0m  [["cart_id", 1]]
+  [1m[35mLineItem Load (0.5ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1  [["cart_id", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered line_items/_line_item.html.erb (11.9ms)
+  Rendered carts/_cart.html.erb (203.3ms)
+Completed 200 OK in 399ms (Views: 383.5ms | ActiveRecord: 9.6ms)
+
+
+Started DELETE "/carts/1" for 127.0.0.1 at 2015-08-24 10:48:35 -0700
+Processing by CartsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DeTWiYh1KQbEja1OXypBlUVO/NMxFe13xY19k6oug7f8U5VqTRInzBashuaqvGXbstyc33Q7SFR2wImbDxYo3A==", "id"=>"1"}
+  [1m[36mCart Load (0.6ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36mLineItem Load (0.8ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 1]]
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "line_items" WHERE "line_items"."id" = $1  [["id", 1]]
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "line_items" WHERE "line_items"."id" = $1[0m  [["id", 2]]
+  [1m[35mSQL (30.8ms)[0m  DELETE FROM "carts" WHERE "carts"."id" = $1  [["id", 1]]
+  [1m[36m (10.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 66ms (ActiveRecord: 44.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-24 10:48:35 -0700
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (0.4ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", nil]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2015-08-24 17:48:35.148562"], ["updated_at", "2015-08-24 17:48:35.148562"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (18.9ms)
+  [1m[35mLineItem Exists (0.4ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1  [["cart_id", 3]]
+  [1m[36mLineItem Load (0.5ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (2.7ms)
+Completed 200 OK in 133ms (Views: 114.9ms | ActiveRecord: 3.4ms)
