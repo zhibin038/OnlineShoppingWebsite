@@ -4,7 +4,16 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+group :development, :test do
+  # if you already have a 'group :development,:test' block in your
+  # Gemfile, you can just move the line "gem 'sqlite3'" into it.
+  gem 'sqlite3' # use SQLite only in development and testing
+end 
+
+group :production do
+  gem 'pg' # use PostgreSQL in production (Heroku)
+end
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
