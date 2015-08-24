@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
 
-group :development, :test do
+group :development do
   # if you already have a 'group :development,:test' block in your
   # Gemfile, you can just move the line "gem 'sqlite3'" into it.
   gem 'sqlite3' # use SQLite only in development and testing
