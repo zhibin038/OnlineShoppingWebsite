@@ -6,11 +6,6 @@ gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
 
 
-group :development, :test do
-  # if you already have a 'group :development,:test' block in your
-  # Gemfile, you can just move the line "gem 'sqlite3'" into it.
-  gem 'sqlite3' # use SQLite only in development and testing
-end 
 
 group :production do
   gem 'pg' # use PostgreSQL in production (Heroku)
@@ -52,7 +47,7 @@ group :development, :test do
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
+  gem 'sqlite3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
