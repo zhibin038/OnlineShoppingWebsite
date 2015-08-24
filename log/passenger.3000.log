@@ -6,3 +6,27 @@
 [ 2015-08-24 10:47:58.8999 9645/0x7fff7a385300 age/Ust/UstRouterMain.cpp:311 ]: Passenger UstRouter online, PID 9645
 App 9658 stdout: 
 App 9671 stdout: 
+
+[ 2015-08-24 11:45:03.3434 9643/0x10f4b0000 age/Cor/CoreMain.cpp:507 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+
+[ 2015-08-24 11:45:03.3438 9645/0x10f25b000 age/Ust/UstRouterMain.cpp:337 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2015-08-24 11:45:03.3439 9645/0x7fff7a385300 age/Ust/UstRouterMain.cpp:399 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-08-24 11:45:03.3441 9643/0x7fff7a385300 age/Cor/CoreMain.cpp:876 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+App 9658 stderr: [ 2015-08-24 11:45:03.3448 9671/0x007fbb9ec392e8(HTTP helper worker) utils.rb:85 ]: *** Exception Errno::EBADF (Bad file descriptor) (process 9671, thread 0x007fbb9ec392e8(HTTP helper worker)):
+App 9658 stderr: 	from /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/passenger-5.0.16/lib/phusion_passenger/request_handler/thread_handler.rb:133:in `accept'
+App 9658 stderr: 	from /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/passenger-5.0.16/lib/phusion_passenger/request_handler/thread_handler.rb:133:in `accept_and_process_next_request'
+App 9658 stderr: 	from /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/passenger-5.0.16/lib/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+App 9658 stderr: 	from /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/passenger-5.0.16/lib/phusion_passenger/request_handler.rb:430:in `block (2 levels) in start_threads'
+App 9658 stderr: 	from /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/passenger-5.0.16/lib/phusion_passenger/utils.rb:111:in `block in create_thread_and_abort_on_exception'
+[ 2015-08-24 11:45:03.3441 9643/0x7fff7a385300 age/Cor/CoreMain.cpp:794 ]: Disconnecting long-running connections for process 9671, application /Users/zhibinzhang/Desktop/Buymore/public (development)
+[ 2015-08-24 11:45:03.3561 9643/0x10f4b0000 Ser/Server.h:751 ]: [ServerThr.1] Freed 128 spare client objects
+[ 2015-08-24 11:45:03.3564 9643/0x10f5b6000 Ser/Server.h:751 ]: [ServerThr.2] Freed 128 spare client objects
+[ 2015-08-24 11:45:03.3575 9643/0x10f6bc000 Ser/Server.h:751 ]: [ApiServer] Freed 0 spare client objects
+[ 2015-08-24 11:45:03.3674 9643/0x10f6bc000 Ser/Server.h:443 ]: [ApiServer] Shutdown finished
+[ 2015-08-24 11:45:03.3500 9645/0x10f25b000 Ser/Server.h:751 ]: [LoggerApiServer] Freed 0 spare client objects
+[ 2015-08-24 11:45:03.3675 9645/0x10f25b000 Ser/Server.h:443 ]: [LoggerApiServer] Shutdown finished
+[ 2015-08-24 11:45:03.3682 9643/0x10f4b0000 Ser/Server.h:443 ]: [ServerThr.1] Shutdown finished
+[ 2015-08-24 11:45:03.3682 9643/0x10f5b6000 Ser/Server.h:443 ]: [ServerThr.2] Shutdown finished
+[ 2015-08-24 11:45:03.3689 9645/0x7fff7a385300 age/Ust/UstRouterMain.cpp:424 ]: Passenger UstRouter shutdown finished
+[ 2015-08-24 11:45:03.3988 9643/0x7fff7a385300 age/Cor/CoreMain.cpp:794 ]: Disconnecting long-running connections for process 9671, application /Users/zhibinzhang/Desktop/Buymore/public (development)
+[ 2015-08-24 11:45:03.6238 9643/0x7fff7a385300 age/Cor/CoreMain.cpp:942 ]: Passenger core shutdown finished
