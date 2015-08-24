@@ -14439,3 +14439,231 @@ Completed 200 OK in 28ms (Views: 18.1ms | ActiveRecord: 4.1ms)
             FROM sqlite_temp_master
             WHERE name='index_line_items_on_product_id' AND type='index'
 
+  [1m[36m (6.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (3.0ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProducts (20150810071032)
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/zhibinzhang/Desktop/Buymore/db/migrate/20150810071032_create_products.rb:9)
+  [1m[36m (7.5ms)[0m  [1mCREATE TABLE "products" ("id" serial primary key, "title" character varying, "description" text, "image_url" character varying, "price" decimal(8,2), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150810071032"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCarts (20150811013214)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (5.0ms)[0m  [1mCREATE TABLE "carts" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150811013214"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateLineItems (20150816023007)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (5.5ms)[0m  [1mCREATE TABLE "line_items" ("id" serial primary key, "product_id" integer, "cart_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.4ms)[0m  CREATE  INDEX  "index_line_items_on_product_id" ON "line_items"  ("product_id")
+  [1m[36m (1.7ms)[0m  [1mCREATE  INDEX  "index_line_items_on_cart_id" ON "line_items"  ("cart_id")[0m
+  [1m[35m (4.2ms)[0m  ALTER TABLE "line_items" ADD CONSTRAINT "fk_rails_11e15d5c6b"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+
+  [1m[36m (2.2ms)[0m  [1mALTER TABLE "line_items" ADD CONSTRAINT "fk_rails_af645e8e5f"
+FOREIGN KEY ("cart_id")
+  REFERENCES "carts" ("id")
+[0m
+  [1m[35mSQL (3.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150816023007"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Migrating to AddQuantityToLineItems (20150816192632)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (6.8ms)[0m  [1mALTER TABLE "line_items" ADD "quantity" integer DEFAULT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150816192632"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Migrating to CombineItemsInCart (20150816194845)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mCart Load (0.9ms)[0m  [1mSELECT "carts".* FROM "carts"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150816194845"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (6.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'carts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (5.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'line_items'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (5.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'products'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for ::1 at 2015-08-23 23:00:16 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (0.6ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 29]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2015-08-24 06:00:17.153715"], ["updated_at", "2015-08-24 06:00:17.153715"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (2.1ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1
+  [1m[36mProduct Load (1.5ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (17.8ms)
+Completed 500 Internal Server Error in 426ms (ActiveRecord: 14.0ms)
+
+ActionView::Template::Error (couldn't find file 'jquery-ui/effect-blind' with type 'application/javascript'):
+     5:   <title>Pragprog Books Online Store</title>
+     6:   <%= stylesheet_link_tag    "application", media: "all",
+     7:     "data-turbolinks-track" => true %>
+     8:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+     9:   <%= csrf_meta_tags %>
+    10: </head>
+    11: <!-- END:head -->
+  app/assets/javascripts/application.js:14
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__912105667460734609_70176036966480'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (186.3ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (127.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (287.5ms)
+
+
+Started GET "/" for ::1 at 2015-08-23 23:03:30 -0700
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (0.5ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 29]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2015-08-24 06:03:30.633563"], ["updated_at", "2015-08-24 06:03:30.633563"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 2.9ms)
+
+ActionView::Template::Error (couldn't find file 'jquery-ui/effect-blind' with type 'application/javascript'):
+     5:   <title>Pragprog Books Online Store</title>
+     6:   <%= stylesheet_link_tag    "application", media: "all",
+     7:     "data-turbolinks-track" => true %>
+     8:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+     9:   <%= csrf_meta_tags %>
+    10: </head>
+    11: <!-- END:head -->
+  app/assets/javascripts/application.js:14
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__912105667460734609_70176036966480'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.2ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (151.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (101.1ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (224.7ms)
+
+
+Started POST "/console/repl_sessions/aae772ce507fa5178789aa623cb9b6c0/trace" for ::1 at 2015-08-23 23:05:01 -0700
+
+
+Started GET "/" for ::1 at 2015-08-23 23:10:12 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (0.6ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 29]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2015-08-24 06:10:12.947722"], ["updated_at", "2015-08-24 06:10:12.947722"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (1.5ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1
+  [1m[36mProduct Load (1.1ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (8.5ms)
+  [1m[35mLineItem Exists (0.8ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1  [["cart_id", 3]]
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (67.0ms)
+Completed 200 OK in 577ms (Views: 512.7ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-08-23 23:10:13 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "products"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mProduct Exists (1.3ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."title" = 'CoffeeScript' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "CoffeeScript"], ["description", "<p>\n        CoffeeScript is JavaScript done right. It provides all of JavaScript's\n  functionality wrapped in a cleaner, more succinct syntax. In the first\n  book on this exciting new language, CoffeeScript guru Trevor Burnham\n  shows you how to hold onto all the power and flexibility of JavaScript\n  while writing clearer, cleaner, and safer code.\n      </p>"], ["image_url", "cs.jpg"], ["price", "36.0"], ["created_at", "2015-08-24 06:11:35.851023"], ["updated_at", "2015-08-24 06:11:35.851023"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mProduct Exists (0.4ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."title" = 'Programming Ruby 1.9 & 2.0' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Programming Ruby 1.9 & 2.0"], ["description", "<p>\n        Ruby is the fastest growing and most exciting dynamic language\n        out there. If you need to get working programs delivered fast,\n        you should add Ruby to your toolbox.\n      </p>"], ["image_url", "ruby.jpg"], ["price", "49.95"], ["created_at", "2015-08-24 06:11:35.857683"], ["updated_at", "2015-08-24 06:11:35.857683"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mProduct Exists (0.4ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."title" = 'Rails Test Prescriptions' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Rails Test Prescriptions"], ["description", "<p>\n        <em>Rails Test Prescriptions</em> is a comprehensive guide to testing\n        Rails applications, covering Test-Driven Development from both a\n        theoretical perspective (why to test) and from a practical perspective\n        (how to test effectively). It covers the core Rails testing tools and\n        procedures for Rails 2 and Rails 3, and introduces popular add-ons,\n        including Cucumber, Shoulda, Machinist, Mocha, and Rcov.\n      </p>"], ["image_url", "rtp.jpg"], ["price", "34.95"], ["created_at", "2015-08-24 06:11:35.862832"], ["updated_at", "2015-08-24 06:11:35.862832"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2015-08-23 23:11:42 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (0.8ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mProduct Load (1.5ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+  [1m[35mProduct Load (1.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (236.2ms)
+  [1m[36mLineItem Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1[0m  [["cart_id", 3]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1  [["cart_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (4.4ms)
+Completed 200 OK in 448ms (Views: 394.3ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/" for ::1 at 2015-08-23 23:13:05 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.5ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (14.0ms)
+  [1m[35mLineItem Exists (0.4ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1  [["cart_id", 3]]
+  [1m[36mLineItem Load (0.4ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (2.1ms)
+Completed 200 OK in 98ms (Views: 93.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2015-08-23 23:13:59 -0700
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (0.4ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+  [1m[35mProduct Load (0.8ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (18.0ms)
+  [1m[36mLineItem Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1[0m  [["cart_id", 3]]
+  [1m[35mLineItem Load (0.5ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1  [["cart_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (4.7ms)
+Completed 200 OK in 157ms (Views: 153.0ms | ActiveRecord: 2.7ms)
