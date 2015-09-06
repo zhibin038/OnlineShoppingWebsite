@@ -7,6 +7,7 @@
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
 Buymore::Application.routes.draw do
+  resources :orders
   resources :line_items
 
   resources :carts
