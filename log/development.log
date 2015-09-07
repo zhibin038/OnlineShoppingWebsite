@@ -17350,3 +17350,1557 @@ Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b9
 
 
 Started GET "/assets/application.self-58c64cc9de45207a5168cf13e9eb5fe99badf7d5d1bae54619b1165379873c14.css?body=1" for 127.0.0.1 at 2015-09-06 12:40:38 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 13:53:30 -0700
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 13:53:30 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 230ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (20.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (153.2ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (97.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (213.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 13:56:43 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 173ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (126.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (251.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (362.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 13:56:44 -0700
+Processing by StoreController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 13:56:44 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 279ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (22.3ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (146.3ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (93.9ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (208.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 13:56:45 -0700
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 13:56:45 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (131.8ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (86.9ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (202.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 13:57:02 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 175ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (137.2ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (83.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (191.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 13:57:03 -0700
+Processing by StoreController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 13:57:03 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (133.2ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (93.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (202.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 13:57:04 -0700
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 13:57:04 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 170ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.9ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (131.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (86.2ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (200.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 13:57:08 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 183ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.1ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (123.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (89.9ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (189.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 13:57:09 -0700
+Processing by StoreController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 13:57:09 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 184ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (133.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (88.8ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (213.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 13:57:13 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 166ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (172.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (102.2ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (225.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 13:57:13 -0700
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 13:57:13 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 170ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (125.1ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (88.2ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (193.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 13:57:27 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 201ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.1ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (136.9ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (91.2ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (193.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 13:57:29 -0700
+Processing by StoreController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 13:57:29 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 231ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (125.9ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (90.1ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (205.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 13:59:55 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.8ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (150.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (83.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (217.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 13:59:56 -0700
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 13:59:56 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 202ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (128.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (86.2ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (196.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 14:00:06 -0700
+Processing by StoreController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 14:00:06 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 264ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.8ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (152.0ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (87.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (194.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 14:00:25 -0700
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 14:00:25 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (131.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (89.0ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (190.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 14:00:28 -0700
+Processing by StoreController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 14:00:28 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 162ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (124.1ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (87.0ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (193.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 14:02:07 -0700
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ArgumentError (A copy of CurrentCart has been removed from the module tree but is still active!):
+  app/controllers/concerns/current_cart.rb:15:in `set_cart'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (125.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (83.9ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (191.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 14:02:45 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.8ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (130.3ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (86.0ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (195.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 14:02:46 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", nil]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2015-09-07 21:02:46.725806"], ["updated_at", "2015-09-07 21:02:46.725806"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mProduct Load (22.3ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+  [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (56.7ms)
+  [1m[36mLineItem Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1[0m  [["cart_id", 8]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1  [["cart_id", 8]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (3.7ms)
+Completed 200 OK in 296ms (Views: 248.0ms | ActiveRecord: 29.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 14:02:47 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", nil]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2015-09-07 21:02:47.020789"], ["updated_at", "2015-09-07 21:02:47.020789"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (25.0ms)
+  [1m[36mLineItem Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1[0m  [["cart_id", 9]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1  [["cart_id", 9]]
+  Rendered collection (0.1ms)
+  Rendered carts/_cart.html.erb (5.5ms)
+Completed 200 OK in 215ms (Views: 206.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/line_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-07 14:02:47 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-07 14:02:47 -0700
+
+
+Started GET "/assets/orders.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-07 14:02:47 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-07 14:02:47 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-09-07 14:02:47 -0700
+
+
+Started GET "/assets/jquery-ui/effect.self-3acdb29e7da09c8f0195b994d2f04d73bfef50dc539c84fd2c835d964d33e5c1.js?body=1" for 127.0.0.1 at 2015-09-07 14:02:47 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-09-07 14:02:47 -0700
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-07 14:02:47 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-09-07 14:02:47 -0700
+
+
+Started GET "/assets/ruby-836fee16e3757bcd4e2c21d064eee4fa81d7f93e4e9a44b1ffcd6c1d41c92a88.jpg" for 127.0.0.1 at 2015-09-07 14:02:47 -0700
+
+
+Started GET "/assets/cs-f56ef62bc41b040664e801a38f068082a75d506d9048307e8096737463503d0b.jpg" for 127.0.0.1 at 2015-09-07 14:02:47 -0700
+
+
+Started GET "/assets/rtp-d3d2240713cce773840785de837acf822d235d1b77040a3e1ed9d8c014cff086.jpg" for 127.0.0.1 at 2015-09-07 14:02:47 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 14:03:02 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (12.9ms)
+  [1m[35mLineItem Exists (0.3ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1  [["cart_id", 9]]
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 9]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (2.8ms)
+Completed 200 OK in 190ms (Views: 186.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-07 14:03:02 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-07 14:03:02 -0700
+
+
+Started GET "/assets/orders.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-07 14:03:02 -0700
+
+
+Started GET "/assets/line_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-07 14:03:02 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-07 14:03:02 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 14:04:10 -0700
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (0.2ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (23.1ms)
+  [1m[36mLineItem Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1[0m  [["cart_id", 9]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1  [["cart_id", 9]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (3.9ms)
+Completed 200 OK in 228ms (Views: 207.2ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/line_items?product_id=1" for 127.0.0.1 at 2015-09-07 14:04:14 -0700
+Processing by LineItemsController#create as JS
+  Parameters: {"authenticity_token"=>"KaSZIzLx9HhTrKhg5jBfGul/G+KgJ6IMSm1bBtkJE5zNdy6QMBe+sjhGR/kiDP6fbwsChIKJ7Gqio1mT2rYj6A==", "product_id"=>"1"}
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT 1[0m  [["cart_id", 9], ["product_id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 1], ["cart_id", 9], ["created_at", "2015-09-07 21:04:14.255814"], ["updated_at", "2015-09-07 21:04:14.255814"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 9]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered line_items/_line_item.html.erb (5.1ms)
+  Rendered carts/_cart.html.erb (12.6ms)
+  Rendered line_items/create.js.erb (16.2ms)
+Completed 200 OK in 148ms (Views: 24.6ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/line_items?product_id=2" for 127.0.0.1 at 2015-09-07 14:04:16 -0700
+Processing by LineItemsController#create as JS
+  Parameters: {"authenticity_token"=>"KaSZIzLx9HhTrKhg5jBfGul/G+KgJ6IMSm1bBtkJE5zNdy6QMBe+sjhGR/kiDP6fbwsChIKJ7Gqio1mT2rYj6A==", "product_id"=>"2"}
+  [1m[36mCart Load (0.5ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT 1[0m  [["cart_id", 9], ["product_id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 2], ["cart_id", 9], ["created_at", "2015-09-07 21:04:16.839541"], ["updated_at", "2015-09-07 21:04:16.839541"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 9]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered line_items/_line_item.html.erb (3.6ms)
+  Rendered carts/_cart.html.erb (9.7ms)
+  Rendered line_items/create.js.erb (13.2ms)
+Completed 200 OK in 32ms (Views: 21.3ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/line_items?product_id=3" for 127.0.0.1 at 2015-09-07 14:04:18 -0700
+Processing by LineItemsController#create as JS
+  Parameters: {"authenticity_token"=>"KaSZIzLx9HhTrKhg5jBfGul/G+KgJ6IMSm1bBtkJE5zNdy6QMBe+sjhGR/kiDP6fbwsChIKJ7Gqio1mT2rYj6A==", "product_id"=>"3"}
+  [1m[35mCart Load (1.4ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT 1  [["cart_id", 9], ["product_id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["product_id", 3], ["cart_id", 9], ["created_at", "2015-09-07 21:04:18.243068"], ["updated_at", "2015-09-07 21:04:18.243068"]]
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1  [["cart_id", 9]]
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered line_items/_line_item.html.erb (4.8ms)
+  Rendered carts/_cart.html.erb (10.3ms)
+  Rendered line_items/create.js.erb (13.0ms)
+Completed 200 OK in 31ms (Views: 19.2ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2015-09-07 14:04:19 -0700
+Processing by OrdersController#new as HTML
+  [1m[35mCart Load (0.3ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mLineItem Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1[0m  [["cart_id", 9]]
+  Rendered orders/_form.html.erb (174.0ms)
+  Rendered orders/new.html.erb within layouts/application (177.3ms)
+  [1m[35mLineItem Exists (0.3ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1  [["cart_id", 9]]
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 9]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered line_items/_line_item.html.erb (7.3ms)
+  Rendered carts/_cart.html.erb (12.1ms)
+Completed 200 OK in 363ms (Views: 345.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 14:04:49 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (34.8ms)
+  [1m[35mLineItem Exists (0.3ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1  [["cart_id", 9]]
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 9]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered line_items/_line_item.html.erb (10.6ms)
+  Rendered carts/_cart.html.erb (28.3ms)
+Completed 200 OK in 269ms (Views: 240.4ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (15.9ms)
+  [1m[35mLineItem Exists (0.3ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1  [["cart_id", 9]]
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 9]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered line_items/_line_item.html.erb (6.7ms)
+  Rendered carts/_cart.html.erb (11.6ms)
+Completed 200 OK in 227ms (Views: 222.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.self-58c64cc9de45207a5168cf13e9eb5fe99badf7d5d1bae54619b1165379873c14.css?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/carts.self-68b25a9695ac9cebf03263ad04d3a967c39764c596afe5a10f8b3113a820e071.css?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/products.self-b5d8c908129961732831fdff9fdb2bd5c750324599ecec9168ec450b8c1a903e.css?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/line_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/orders.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/store.self-0a18e891639ea833433f36ccb4aca02ecbcc086689cefa6e0f1b63ede05621c4.css?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/scaffolds.self-ae47523fba8d8e9b74e10d30229ae0a6bcb19c685077214f2a287e94eb685523.css?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/jquery-ui/effect-blind.self-ed102209d7aa0b7374f3db8478cc7dcff5f9980d3146e8bf9fbfab959c6d5d8a.js?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/carts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/jquery-ui/effect.self-3acdb29e7da09c8f0195b994d2f04d73bfef50dc539c84fd2c835d964d33e5c1.js?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/line_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/orders.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/store.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/ruby-836fee16e3757bcd4e2c21d064eee4fa81d7f93e4e9a44b1ffcd6c1d41c92a88.jpg" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/rtp-d3d2240713cce773840785de837acf822d235d1b77040a3e1ed9d8c014cff086.jpg" for 127.0.0.1 at 2015-09-07 14:04:52 -0700
+
+
+Started GET "/assets/logo-c6cc13d09c4262e637d9af74fa20f7cc0ba8cb57864863b3ce3135f37cbf308c.png" for 127.0.0.1 at 2015-09-07 14:04:53 -0700
+
+
+Started GET "/assets/cs-f56ef62bc41b040664e801a38f068082a75d506d9048307e8096737463503d0b.jpg" for 127.0.0.1 at 2015-09-07 14:04:53 -0700
+
+
+Started POST "/line_items?product_id=1" for 127.0.0.1 at 2015-09-07 14:04:56 -0700
+Processing by LineItemsController#create as JS
+  Parameters: {"authenticity_token"=>"UpCzP/VCDYqAfH0usR76E2EMDUN8FrNDC9NJyKGDkAW2QwSM96RHQOuWkrd1IluW53gUJV64/SXjHUtdojygcQ==", "product_id"=>"1"}
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mLineItem Load (0.4ms)[0m  [1mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT 1[0m  [["cart_id", 9], ["product_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "line_items" SET "quantity" = $1, "updated_at" = $2 WHERE "line_items"."id" = $3[0m  [["quantity", 2], ["updated_at", "2015-09-07 21:04:56.999677"], ["id", 11]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 9]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered line_items/_line_item.html.erb (5.0ms)
+  Rendered carts/_cart.html.erb (9.9ms)
+  Rendered line_items/create.js.erb (12.8ms)
+Completed 200 OK in 31ms (Views: 19.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2015-09-07 14:04:58 -0700
+
+ActionController::RoutingError (undefined local variable or method `authorize' for OrdersController:Class):
+  app/controllers/orders_controller.rb:3:in `<class:OrdersController>'
+  app/controllers/orders_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (211.1ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (88.2ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (203.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 14:05:26 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (27.4ms)
+  [1m[35mLineItem Exists (0.3ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1  [["cart_id", 9]]
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 9]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered line_items/_line_item.html.erb (7.3ms)
+  Rendered carts/_cart.html.erb (21.0ms)
+Completed 200 OK in 271ms (Views: 249.1ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mProduct Load (0.9ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (14.6ms)
+  [1m[35mLineItem Exists (0.3ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1  [["cart_id", 9]]
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 9]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered line_items/_line_item.html.erb (6.1ms)
+  Rendered carts/_cart.html.erb (11.4ms)
+Completed 200 OK in 184ms (Views: 179.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.self-58c64cc9de45207a5168cf13e9eb5fe99badf7d5d1bae54619b1165379873c14.css?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/scaffolds.self-ae47523fba8d8e9b74e10d30229ae0a6bcb19c685077214f2a287e94eb685523.css?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/carts.self-68b25a9695ac9cebf03263ad04d3a967c39764c596afe5a10f8b3113a820e071.css?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/line_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/orders.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/products.self-b5d8c908129961732831fdff9fdb2bd5c750324599ecec9168ec450b8c1a903e.css?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/jquery-ui/effect-blind.self-ed102209d7aa0b7374f3db8478cc7dcff5f9980d3146e8bf9fbfab959c6d5d8a.js?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/carts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/orders.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/jquery-ui/effect.self-3acdb29e7da09c8f0195b994d2f04d73bfef50dc539c84fd2c835d964d33e5c1.js?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/store.self-0a18e891639ea833433f36ccb4aca02ecbcc086689cefa6e0f1b63ede05621c4.css?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/line_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/store.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/rtp-d3d2240713cce773840785de837acf822d235d1b77040a3e1ed9d8c014cff086.jpg" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/ruby-836fee16e3757bcd4e2c21d064eee4fa81d7f93e4e9a44b1ffcd6c1d41c92a88.jpg" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/cs-f56ef62bc41b040664e801a38f068082a75d506d9048307e8096737463503d0b.jpg" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/assets/logo-c6cc13d09c4262e637d9af74fa20f7cc0ba8cb57864863b3ce3135f37cbf308c.png" for 127.0.0.1 at 2015-09-07 14:05:32 -0700
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2015-09-07 14:05:34 -0700
+
+ActionController::RoutingError (undefined local variable or method `authorize' for OrdersController:Class):
+  app/controllers/orders_controller.rb:3:in `<class:OrdersController>'
+  app/controllers/orders_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (245.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.2ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (94.9ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (207.1ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2015-09-07 14:06:10 -0700
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 14:06:10 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 155ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.8ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (129.0ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (95.0ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (204.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 14:06:17 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 166ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (122.1ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (104.1ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (310.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 14:06:17 -0700
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (0.2ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (20.6ms)
+  [1m[36mLineItem Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1[0m  [["cart_id", 9]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1  [["cart_id", 9]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered line_items/_line_item.html.erb (11.7ms)
+  Rendered carts/_cart.html.erb (32.5ms)
+Completed 200 OK in 328ms (Views: 309.2ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 14:06:18 -0700
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (1.3ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+  [1m[35mProduct Load (0.8ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (20.9ms)
+  [1m[36mLineItem Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1[0m  [["cart_id", 9]]
+  [1m[35mLineItem Load (0.5ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1  [["cart_id", 9]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered line_items/_line_item.html.erb (6.2ms)
+  Rendered carts/_cart.html.erb (11.5ms)
+Completed 200 OK in 357ms (Views: 350.3ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 14:06:23 -0700
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (0.2ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (26.9ms)
+  [1m[36mLineItem Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1[0m  [["cart_id", 9]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1  [["cart_id", 9]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered line_items/_line_item.html.erb (6.1ms)
+  Rendered carts/_cart.html.erb (11.7ms)
+Completed 200 OK in 251ms (Views: 245.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2015-09-07 14:06:26 -0700
+Processing by OrdersController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 14:06:26 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 174ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349113920320'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (131.1ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (87.1ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (193.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 14:08:30 -0700
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ArgumentError (A copy of CurrentCart has been removed from the module tree but is still active!):
+  app/controllers/concerns/current_cart.rb:15:in `set_cart'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (252.1ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (97.0ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (206.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 14:08:30 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mProduct Load (1.9ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1
+  [1m[36mProduct Load (0.7ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (32.4ms)
+  [1m[35mLineItem Exists (0.4ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1  [["cart_id", 9]]
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 9]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered line_items/_line_item.html.erb (10.4ms)
+  Rendered carts/_cart.html.erb (30.8ms)
+Completed 200 OK in 251ms (Views: 226.7ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2015-09-07 14:08:32 -0700
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 14:08:32 -0700
+Processing by SessionsController#new as HTML
+  [1m[35mCart Load (0.3ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 9]]
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+  [1m[36mLineItem Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1[0m  [["cart_id", 9]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1  [["cart_id", 9]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered line_items/_line_item.html.erb (6.8ms)
+  Rendered carts/_cart.html.erb (12.2ms)
+Completed 200 OK in 220ms (Views: 217.3ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-09-07 14:08:58 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n92XpdjV7dMxpMNrD4XpFI2rrujn7nkevqbKzDp8Y6J7DiAW2jOnGVpOLPLLuUiRC9+3jsVAN3hWaMhZOcNT1g==", "name"=>"kevin", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mCart Load (0.2ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1[0m  [["name", "kevin"]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 121ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-07 14:08:58 -0700
+Processing by SessionsController#new as HTML
+  [1m[35mCart Load (0.2ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 9]]
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+  [1m[36mLineItem Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1[0m  [["cart_id", 9]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1  [["cart_id", 9]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered line_items/_line_item.html.erb (6.1ms)
+  Rendered carts/_cart.html.erb (13.2ms)
+Completed 200 OK in 257ms (Views: 253.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-09-07 14:17:18 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8/di6ca0ebjAJk7G8b2Mi5IE2ZLaZxeJ0bM51sfX3pkXJNVaxFIzcqvMoV81gS0OFHDA9PjJWe85fTtDxGju7Q==", "name"=>"kevin", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mCart Load (0.3ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1[0m  [["name", "kevin"]]
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 93ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2015-09-07 14:17:18 -0700
+Processing by AdminController#index as HTML
+  [1m[35mCart Load (0.2ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "orders"[0m
+  Rendered admin/index.html.erb within layouts/application (0.7ms)
+  [1m[35mLineItem Exists (0.3ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1  [["cart_id", 9]]
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 9]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered line_items/_line_item.html.erb (7.1ms)
+  Rendered carts/_cart.html.erb (12.1ms)
+Completed 200 OK in 199ms (Views: 186.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2015-09-07 14:17:39 -0700
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.4ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 179ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349163071460'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (120.3ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (89.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (188.7ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2015-09-07 14:17:40 -0700
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.4ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered orders/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 262ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `line_items' for nil:NilClass):
+    18:     <div id="side">
+    19: <!-- START_HIGHLIGHT -->
+    20:       <!-- START:hidden_div -->
+    21:       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    22:         <%= render @cart %>
+    23:       <% end %>
+    24:     <!-- END:hidden_div -->
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3484980348153879272_70349163071460'
+
+
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.2ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (138.2ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (91.4ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/zhibinzhang/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (202.4ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2015-09-07 14:18:41 -0700
+Processing by OrdersController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mOrder Load (0.4ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered orders/index.html.erb within layouts/application (12.2ms)
+  [1m[36mLineItem Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1[0m  [["cart_id", 9]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1  [["cart_id", 9]]
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered line_items/_line_item.html.erb (19.6ms)
+  Rendered carts/_cart.html.erb (63.0ms)
+Completed 200 OK in 266ms (Views: 244.3ms | ActiveRecord: 7.5ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2015-09-07 14:28:54 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YJNhmPTpW4yJmMU40ifacWDXS9bwy//rswQT1Vm2oTKEQNYr9g8RRuJyKqEWG3v05qNSsNJlsY1byhFAWgmRRg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 14:28:54 -0700
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (0.2ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (18.3ms)
+  [1m[36mLineItem Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1[0m  [["cart_id", 9]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1  [["cart_id", 9]]
+  [1m[36mProduct Load (2.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered line_items/_line_item.html.erb (8.1ms)
+  Rendered carts/_cart.html.erb (12.9ms)
+Completed 200 OK in 222ms (Views: 216.2ms | ActiveRecord: 4.1ms)
+
+
+Started DELETE "/carts/9" for 127.0.0.1 at 2015-09-07 14:29:00 -0700
+Processing by CartsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/7Va+5e5bNLswD2yKoMA09Mj61Mhzi3okwDpQMoz6twbZu1IlV8mGIcq0ivuv6FWVVfyNQNgY457zuvVyYzaqA==", "id"=>"9"}
+  [1m[35mCart Load (0.3ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1  [["cart_id", 9]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "line_items" WHERE "line_items"."id" = $1[0m  [["id", 11]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "line_items" WHERE "line_items"."id" = $1  [["id", 12]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "line_items" WHERE "line_items"."id" = $1[0m  [["id", 13]]
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "carts" WHERE "carts"."id" = $1  [["id", 9]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 14:29:01 -0700
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (0.2ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", nil]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2015-09-07 21:29:01.023462"], ["updated_at", "2015-09-07 21:29:01.023462"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (16.4ms)
+  [1m[35mLineItem Exists (0.3ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT 1  [["cart_id", 10]]
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 10]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (4.6ms)
+Completed 200 OK in 305ms (Views: 297.2ms | ActiveRecord: 2.4ms)

@@ -1,6 +1,7 @@
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
 class SessionsController < ApplicationController
+  before_action :set_cart, only: [:new, :create]
   skip_before_action :authorize
   def new
   end
