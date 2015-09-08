@@ -27,10 +27,15 @@
 
 <!-- END_HIGHLIGHT -->
       <ul>
-        <li><%= link_to 'home',   store_path   %></li>
-        <li><%= link_to 'signup',   'users#new'   %></li>
-        <li><%= link_to 'login',   'login'   %></li>
+        <li><%= link_to 'Home',   store_path   %></li>
       </ul>
+    <% unless session[:user_id] %>
+      <ul>
+	  	<li><%= link_to 'Signup',   'users#new'   %></li>
+	  	<li><"\n" > </li>
+	    <li><%= link_to 'Login',   'login'   %></li>
+	  <ul>	
+	<% end %>
       
       <% if session[:user_id] %>
         <ul>
